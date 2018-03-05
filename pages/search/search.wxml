@@ -1,0 +1,14 @@
+<!--pages/search/search.wxml-->
+<view class='search df'>
+  <input class='df_1' placeholder='请输入您要搜索的内容' auto-focus focus='{{focus}}' value='{{searchValue}}' bindinput='searchValueInput'>
+  </input>
+  <button bindtap='doSearch'>
+    <image class='searchcion' src='/assets/images/search.png'></image>
+  </button>
+</view>
+
+<view class='cont' wx:if="{{hotKeyShow}}">
+  <text class='font_14'>
+    热门搜索
+  </text>
+</view>

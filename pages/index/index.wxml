@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="page">
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+    <block wx-for='{{imgUrls}}'>
+      <swiper-item>
+        <image src='{{item.photo}}' class='slide-image' width='100%' height='200'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='cont'>
+    <navigator class='pr' url='../product/detail?productId={{item.id}}' hover-class='changestyle'>
+      <image class='photo' src='{{item.photo_x}}'></image>
+    </navigator>
+  </view>
+</view>

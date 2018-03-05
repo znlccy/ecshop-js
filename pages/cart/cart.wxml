@@ -1,0 +1,36 @@
+<!-- 购物车界面 -->
+<view class="page">
+	<!-- <map longitude="121.48" latitude="31.22"></map> -->
+	<view class="shop df" wx:for="{{productData}}" wx:key="key">
+		<image class="sh_slt" src="{{item.ImgUrl}}"></image>
+		<view class="df_1">
+			<view class="sp_text">
+				<navigator url="../index/detail?productId={{item.ProID}}">
+					<view class="sp_tit ovh1">{{item.ProductName}}</view>
+				</navigator>
+				<view class="sp_neb">数量：x{{item.BuyCount}}</view>
+				<view class="sp_jg">¥：{{item.Price}}</view>
+				<button class="dle" data-card-id="{{item.CartID}}" bindtap="removeShopCard">删除</button>
+				<navigator class="dle" url="../order/pay?productId={{item.ProID}}&cartId={{item.CartID}}&buyCount={{item.BuyCount}}">
+					下单
+				</navigator>
+			</view>
+		</view>
+	</view>
+	
+	<!-- 样式 -->
+	<view class="container carts-list" wx:if="{{carts==''}}">
+		<view class="pp">
+			<image class="kong" src="../../assets/images/cart.jpg" mode="aspectFill"></image>
+			<view class="cla">购物车空空如也</view>
+		</view>
+	</view>
+
+	<!-- 边框 -->
+	<view class="container carts-list">
+		<!-- 勾 -->
+		<view wx:for="{{carts}}" class="carts-item" data-title="{{item.pro_name}}" id="{{item.id}}">
+			<icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}"></icon>
+		</view>
+	</view>
+</view>
