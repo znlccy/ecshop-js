@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/search/search",
+    "pages/rituall/rituall",
     "pages/index/index",
     "pages/product/detail",
-    
+    "pages/search/search",
     "pages/user/user",
     "pages/user/dingdan",
     "pages/user/tuihuo",
@@ -16,7 +16,7 @@
     "pages/address/user-address/user-address",
     "pages/category/index",
     "pages/ritual/ritual",
-    "pages/rituall/rituall",
+    
     "pages/shop-store/shop-store",
     "pages/logs/logs"
   ],
