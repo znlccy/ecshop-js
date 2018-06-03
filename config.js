@@ -18,8 +18,8 @@ var config = {
 	tunnelUrl: 'https://${host}/tunnel',
 
 	// 生成支付订单的接口
-	paymentUrl: 'https://${host}/payment',
-
+  paymentUrl: 'https://${host}/payment',
+  
 	// 发送模板消息接口
 	templateMessageUrl: 'https://${host}/templateMessage',
 
